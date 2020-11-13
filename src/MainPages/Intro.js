@@ -14,9 +14,6 @@ const intro = () => {
         <p>React uses one different JavaScript syntax, because this the preprocessor <b>Babel</b> is required to compile the code.</p>
         <p>Babel allows us to use "HTML syntax" to build our applicantion.</p>
         
-        <h2>React-DOM</h2>
-        <p>React-DOM renders the components to the real DOM.</p>
-        
         <h2>Component</h2>
         <p>Component is just a function.</p>
         <ul>
@@ -88,8 +85,30 @@ const intro = () => {
                 </ul>
             </li>
         </ol>
+        
         <h2>JSX</h2>
-        <JsInsideJsx></JsInsideJsx>
+        <p>Is a special JS <u>syntax extension</u> that produces react <u>elements</u>. Its use is optional, so react donsn't require it.</p>
+        <h3>JSX restrictions:</h3>
+        <ul>
+            <li>
+                <p>The input "class" is not allowed, therefore we will use the tag "className".</p>
+            </li>
+            <li>
+                <p>React permits only one root element per component.</p>
+            </li>
+        </ul>
+        <h3>We need to use curly braces {"{ }"} to use JS sintax inside on the JSX:</h3>
+        <p>The code is:<br/> <b>{"{"}Math.floor(Math.random()*2000){"}"}</b></p> 
+        <p>The result will be someone random number between 0 and 2000: <b><JsInsideJsx/></b></p>
+        
+        <h2>React-DOM</h2>
+        <p>React-DOM renders the components to the real DOM.</p>
+        <p>ReactDOM is a react object, it allows us to call his methods.</p>
+        <h3>Render method</h3>
+        <p>The code:</p>
+        <div className="Code">
+            <p>...</p>
+        </div>
     </div>
 }
 

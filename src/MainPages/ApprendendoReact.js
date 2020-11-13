@@ -4,7 +4,10 @@ import Intro from '../MainPages/Intro';
 function ApprendendoReact() {
   return (
     <div>
-      <h1 className="Title">React annotations</h1>
+      <div className="Title">
+        <h1>React annotations</h1>
+        <p>Developed by Facebook, studded by Rodrigo Fentanes.</p>
+      </div>
       <Intro/>
     </div>
   );
