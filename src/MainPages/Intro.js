@@ -21,7 +21,7 @@ const intro = () => {
         <p>Component is just a function.</p>
         <ul>
             <li>This function need the first letter as capital.</li>
-            <li>This component function has to return the code to be rendered to the real DOM.</li>
+            <li>This function has to return the code to be rendered to the real DOM.</li>
         </ul>
         <p>When creating components, you have the choice between <b>three different ways</b>:</p>
         <ol>
@@ -88,6 +88,7 @@ const intro = () => {
                 </ul>
             </li>
         </ol>
+        <h2>JSX</h2>
         <JsInsideJsx></JsInsideJsx>
     </div>
 }
