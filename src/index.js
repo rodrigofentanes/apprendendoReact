@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './css/index.css';
+import ApprendendoReact from './MainPages/ApprendendoReact';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ApprendendoReact />
   </React.StrictMode>,
   document.getElementById('root')
 );
