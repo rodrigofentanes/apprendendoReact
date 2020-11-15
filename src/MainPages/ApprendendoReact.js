@@ -6,7 +6,7 @@ function ApprendendoReact() {
     <div>
       <div className="Title">
         <h1>React annotations</h1>
-        <p>Developed by Facebook, studded by Rodrigo Fentanes.</p>
+        <p>Developed by Facebook. A study by Rodrigo Fentanes.</p>
       </div>
       <Intro/>
     </div>

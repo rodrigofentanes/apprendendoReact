@@ -2,6 +2,9 @@ import FunctionalComponent from "../ExemplePages/FunctionalComponent";
 import OtherComponent from "../ExemplePages/OtherComponent";
 import JsInsideJsx  from '../ExemplePages/JsInsideJsx';
 import ClassBasedComponent  from '../ExemplePages/ClassBasedComponent';
+import PassingValuesFunctional from "../ExemplePages/PassingValuesFunctional";
+import PassingValuesClassBased from "../ExemplePages/PassingValuesClassBased";
+import ChildrenComponent from "../ExemplePages/ChildrenComponent";
 
 const intro = () => {
     return <div>
@@ -105,10 +108,66 @@ const intro = () => {
         <p>React-DOM renders the components to the real DOM.</p>
         <p>ReactDOM is a react object, it allows us to call his methods.</p>
         <h3>Render method</h3>
+        <p>The render method allow us to...</p>
+
+        <h2>Outputting dynamic content</h2>
+        <p>We will need the argument "props" to manage all data. the props argument holds all properties of one component. Properties is the attributes that we have inside a component.</p>
+        <p><b>Note</b>: the name "props" is chose by convention, but we can change the argument name "props" to any other name. </p>
+        <h3>Functional way</h3>
         <p>The code:</p>
         <div className="Code">
-            <p>...</p>
+            <p>
+                {"const passingValuesFunctional = (props) => {"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;{"return <div>"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"I'am {props.name} and I have {props.age} years old."}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;{"</div>"}<br/>
+                {"};"}<br/>
+                {"export default passingValuesFunctional;"}<br/>
+            </p>
         </div>
+        <p>The result:</p>
+        <div className="Result">
+            <PassingValuesFunctional name="Rodrigo" age="30">This code inside the tag is not visible</PassingValuesFunctional>
+        </div>
+        <h3>Class-Based way</h3>
+        <p>The code:</p>
+        <div className="Code">
+            <p>
+                {"import React, { Component } from 'react';"}<br/><br/>
+                {"class PassingValuesClassBased extends Component {"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;{"render() {"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"return <div>"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"My name is {this.props.name} and my age is {this.props.age}"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"</div> "}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;{"}"}<br/>
+                {"};"}<br/>
+                {"export default PassingValuesClassBased;"}<br/>
+            </p>
+        </div>
+        <p>The result:</p>
+        <div className="Result">
+            <PassingValuesClassBased name="Rodrigo" age="30">This code inside the tag is not visible</PassingValuesClassBased>
+        </div>
+        <h3>The "children" element</h3>
+        <p>We use {"{props.children}"} sintax to access the elements inside one component tag.</p>
+        <p>Look the code bellow to understand:</p>
+        <div className="Result">
+            <ChildrenComponent>This code inside the tag is now visible</ChildrenComponent>
+        </div>
+        <h3>Understanding and using State</h3>
+        <p>A Class-Based way is called "smart" because inside one class we can have variables and other interesting properties.</p>
+        <p>
+            While props is set and passed from outside a component, the special propertie named "state" is managed inside a component.
+            The propertie "state" only can be used when we "extends" actual class/component to the "Component" class.
+            State must be used with care, because it can make the app unpredictable and hard to manage.
+        </p>
+        <p>"state" is one reserved word. Its used to manage some internal data information.</p>
+        <p><b>Note</b>: the square brackets {"[ ]"} is used to open and close one array. </p>
+        <p><b>Note</b>: the word "this" refers to it own class. </p>
+
+
+        <h2></h2>
+
     </div>
 }
 
