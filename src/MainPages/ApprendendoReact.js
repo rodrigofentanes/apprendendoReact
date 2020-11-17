@@ -1,5 +1,7 @@
 import '../css/ApprendendoReact.css';
-import Intro from '../MainPages/Intro';
+import Intro from './Intro';
+import {ListsAndConditionals} from './ListsAndConditionals';
+
 
 function ApprendendoReact() {
   return (
@@ -9,6 +11,7 @@ function ApprendendoReact() {
         <p>Developed by Facebook. A study by Rodrigo Fentanes.</p>
       </div>
       <Intro/>
+      <ListsAndConditionals/>
     </div>
   );
 }
