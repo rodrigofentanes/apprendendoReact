@@ -1,6 +1,6 @@
 function OtherComponent() {
     return (
-      <div>Some JSX code.</div>
+      <>Some JSX code.</>
     );
   }
 

@@ -1,7 +1,7 @@
 const childrenComponent = (props) => {
-    return <p>
+    return <>
         {props.children}
-    </p>
+    </>
 }
 
 export default childrenComponent;

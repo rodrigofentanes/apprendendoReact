@@ -1,5 +1,5 @@
 const functionalComponent = () => {
-  return <div>Some JSX code.</div>
+  return <>Some JSX code.</>
 }
 
 export default functionalComponent;
