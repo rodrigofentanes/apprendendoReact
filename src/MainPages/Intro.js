@@ -144,7 +144,7 @@ const intro = () => {
         <p>ReactDOM is a react object, it allows us to call his methods.</p>
         <div className="h3">
             <h3>Render method</h3>
-            <p>The render method allow us to...</p>
+            <p>The render method allow us to render one componet isolated if we want. Everything inside the render method will be renderized.</p>
         </div>
 
 
