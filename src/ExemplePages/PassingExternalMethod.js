@@ -1,5 +1,5 @@
-import {Component} from "react";
-import { UsingExternalMethod } from "../ExemplePages/UsingExternalMethod";
+import {Component} from 'react';
+import { UsingExternalMethod } from '../ExemplePages/UsingExternalMethod';
 
 export default class PassingExternalMethod extends Component {
 

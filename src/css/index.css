@@ -10,6 +10,7 @@ body {
 }
 
 h2{
+  text-align: center;
   background-color: orange;
   padding: 1.2px;
   padding-bottom: .2em;

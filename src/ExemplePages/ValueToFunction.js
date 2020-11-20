@@ -1,5 +1,5 @@
-import {Component, bind} from "react";
-import { UsingExternalMethod } from "./UsingExternalMethod";
+import {Component, bind} from 'react';
+import { UsingExternalMethod } from './UsingExternalMethod';
 
 export default class ValueToFunction extends Component {
 

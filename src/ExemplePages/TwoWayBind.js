@@ -1,5 +1,5 @@
-import {Component, bind} from "react";
-import { TwoWayBindForm } from "./TwoWayBindForm";
+import {Component, bind} from 'react';
+import { TwoWayBindForm } from './TwoWayBindForm';
 
 export default class TwoWayBind extends Component {
 

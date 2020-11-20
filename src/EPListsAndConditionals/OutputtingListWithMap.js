@@ -1,5 +1,5 @@
-import {Component} from "react";
-import { UsingExternalMethod } from "./UsingExternalMethod";
+import {Component} from 'react';
+import { UsingExternalMethod } from './UsingExternalMethod';
 
 export default class OutputtingListWithMap extends Component {
 

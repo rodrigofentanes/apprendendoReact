@@ -1,4 +1,4 @@
-import {Component} from "react";
+import {Component} from 'react';
 
 export default class CssInlineStyle extends Component {
 
@@ -11,8 +11,20 @@ export default class CssInlineStyle extends Component {
             cursor: 'cell'
         };
 
+        const buttonText = 'This is a inline stylized button';
+        
+        function getButtonText(){
+            return 'Click on me';
+        } 
+
         return <>
-            <button style={ourStyle} >This is one inline styled button</button>
+            <button style={ourStyle} >
+                {buttonText}
+            </button>
+            <br/>
+            <button style={ourStyle} >
+                {getButtonText()}
+            </button>
         </>
     }
 }

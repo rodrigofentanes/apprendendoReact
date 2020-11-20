@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 class StatePropertie extends Component {
+    //this is one JS object
     state = {
         persons: [
             {name:'Julius', age:28},

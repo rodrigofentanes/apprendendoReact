@@ -8,7 +8,7 @@ ReactDOM.render(
   <React.StrictMode>
     <ApprendendoReact />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root') // document.querySelector('#root') // is the same?
 );
 
 // If you want to start measuring performance in your app, pass a function

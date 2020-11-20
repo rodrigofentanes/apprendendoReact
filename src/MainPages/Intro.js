@@ -1,17 +1,17 @@
-import FunctionalComponent from "../ExemplePages/FunctionalComponent";
-import OtherComponent from "../ExemplePages/OtherComponent";
+import FunctionalComponent from '../ExemplePages/FunctionalComponent';
+import OtherComponent from '../ExemplePages/OtherComponent';
 import JsInsideJsx  from '../ExemplePages/JsInsideJsx';
 import ClassBasedComponent  from '../ExemplePages/ClassBasedComponent';
-import PassingValuesFunctional from "../ExemplePages/PassingValuesFunctional";
-import PassingValuesClassBased from "../ExemplePages/PassingValuesClassBased";
-import ChildrenComponent from "../ExemplePages/ChildrenComponent";
-import StatePropertie from "../ExemplePages/StatePropertie";
-import ReRenderStateDOM from "../ExemplePages/ReRenderStateDOM";
-import { ReRenderStateDOMIntoHook } from "../ExemplePages/ReRenderStateDOMIntoHook";
-import PassingExternalMethod from "../ExemplePages/PassingExternalMethod";
-import ValueToFunction from "../ExemplePages/ValueToFunction";
-import TwoWayBind from "../ExemplePages/TwoWayBind";
-import CssInlineStyle from "../ExemplePages/CssInlineStyle";
+import PassingValuesFunctional from '../ExemplePages/PassingValuesFunctional';
+import PassingValuesClassBased from '../ExemplePages/PassingValuesClassBased';
+import ChildrenComponent from '../ExemplePages/ChildrenComponent';
+import StatePropertie from '../ExemplePages/StatePropertie';
+import ReRenderStateDOM from '../ExemplePages/ReRenderStateDOM';
+import { ReRenderStateDOMIntoHook } from '../ExemplePages/ReRenderStateDOMIntoHook';
+import PassingExternalMethod from '../ExemplePages/PassingExternalMethod';
+import ValueToFunction from '../ExemplePages/ValueToFunction';
+import TwoWayBind from '../ExemplePages/TwoWayBind';
+import CssInlineStyle from '../ExemplePages/CssInlineStyle';
 
 const intro = () => {
     return <div>
@@ -20,29 +20,184 @@ const intro = () => {
         <p>This user interfaces is build throught <u>components</u>.</p>
         <p>All React activity happens on the browser.</p>
         
-        <h2>Babel preprocessor</h2>
-        <p>React uses one different JavaScript syntax, because this the preprocessor <b>Babel</b> is required to compile the code.</p>
-        <p>Babel allows us to use "HTML syntax" to build our applicantion.</p>
+
+
+
+        <h2>Babel (Dependency)</h2>
+        <p>
+            React uses different versions of JavaScript, so the preprocessor <b>Babel </b> 
+            is required to compile and run the code within any brownser.
+        </p>
+        <p>We can enter in <a href="https://babeljs.io/" target="_blank" title="click here and go to the page">babel</a> website to check the code and see how it looks like after be converted.</p>
+        <p>Babel converts the JSX code too.</p>
         
 
 
 
+        <h2>Webpack (Dependency)</h2>
+        <p></p>
+
+
+
+
+        <h2>Dev Server (Dependency)</h2>
+        <p></p>
+        
+
+
+
+        <h2>Generating a REACT project</h2>
+        <p>The recommended method for generating a project is now:</p>
+        <div className="Code">
+            <p>
+                npx create-react-app myapp
+            </p>
+        </div>
+        <p>The old way have two steps:</p>
+        <div className="Code">
+            <p>
+                npm install -g create-react-app <br/>
+            </p>
+        </div>
+        <div className="Code">
+            <p>
+                create-react-app myapp
+            </p>
+        </div>
+        <p>
+            If you get any errors about missing templates or how a global Create React App install is no longer supported even 
+            when using this command, you likely need to remove the global package from your system:
+        </p>
+        <div className="Code">
+            <p>
+                npm uninstall -g create-react-app
+            </p>
+        </div>
+        <p className="Note"><b>Note: </b>If you is in one linux distro you will need to do some steps more to complete delete:</p>
+        <div className="Code">
+            <p>
+                rm -rf /usr/local/bin/create-react-app
+            </p>
+        </div>
+        <p className="Note"><b>Note: </b>If you want to know more about, access the site: <a href="https://github.com/facebook/create-react-app" target="_blank" title="click here and go to the page">https://github.com/facebook/create-react-app</a></p>
+        
+
+        
+
+        <h2>Understanding Project Directory</h2>
+        <p><b>src: </b>Folder where we put all the source code we write.</p>
+        <p><b>public: </b>Folder that stores static files, like images.</p>
+        <p><b>node_modules: </b>Folder that contains all of ou project dependencies.</p>
+        <p><b>package.json: </b>Records our project dependencies and configures our project.</p>
+        <p><b>package.lock: </b>Records the exact version of packages that we install.</p>
+        <p><b>README.md: </b>Instructions on how to use this project.</p>
+        <div className="h3">
+            <h3>Other types of directories (patterns)</h3>
+            <p><b>assets: </b>Folder that...</p>
+            <p><b>components: </b>Folder that...</p>
+            <p><b>helpers: </b>Folder that...</p>
+            <p><b>hooks: </b>Folder that...</p>
+            <p><b>service: </b>Folder that...</p>
+            <p><b>views: </b>Folder that...</p>
+        </div>
+
+
+
+
+        <h2>Running a npm/yarn server</h2>
+        <p>To start a server we need to put into the terminal:</p>
+        <div className="Code">
+            <p>
+                npm start
+            </p>
+        </div>
+        <p>or:</p>
+        <div className="Code">
+            <p>
+                yarn start
+            </p>
+        </div>
+        <p className="Note"><b>Note: </b>Execute this code above inside the project folder.</p>
+        <p>We can access the site on port: <a href="http://localhost:3000/" target="_blank" title="click here and go to the page">http://localhost:3000/</a></p>
+        <p>or we can use the port given by the server itself, it will look like <b>http://192.168.0.6/</b></p>
+        <p className="Note"><b>Note: </b>We can see the given port as soon as the server starts.</p>
+
+
+
+
+        <h2>JSX</h2>
+        <p>The JSX allows us to use "HTML" syntax inside our code.</p>
+        <p className="Note"><b>Note: </b>Special dialect of JSX is JavaScript code, its not HTML</p>
+        <p className="Note"><b>Note: </b>Brownser don't understad JSX code! We write JSX then run tools to turn it into normal JS.</p>
+        <p className="Note"><b>Note: </b>Very similar in form and function to HTML with a couple differences.</p>
+        <p>JSX is a special JS <u>syntax extension</u> that produces react <u>elements</u>. Its use is optional, so react donsn't require it.</p>
+        <div className="h3">
+            <h3>JSX restrictions:</h3>
+            <ul>
+                <li>
+                    <p>The attribute "class" is not allowed, therefore we will use the attribute "className".</p>
+                </li>
+                <li>
+                    <p>The attribute "for" is not allowed, therefore we will use the attribute "htmlFor".</p>
+                </li>
+                <li>
+                    <p>React permits only one root element per component.</p>
+                </li>
+            </ul>
+        </div>
+        <div className="h3">
+            <h3>JSX Interpolation</h3>
+            <p>We need to use curly braces {"{ }"} to use JS within the JSX:</p>
+            <p>The code is: </p>
+            <div className="Code">
+                <p>
+                    {"{"}Math.floor(Math.random()*2000){"}"}
+                </p>
+            </div>
+            <p>The result will be someone random number between 0 and 2000:</p>
+            <div className="Result">
+                <p>
+                <JsInsideJsx/>
+                </p>
+            </div>
+            <p className="Note"><b>Note:</b> The code to reload the page is interesting, it is worth looking at.</p>
+        </div>
+
+
+
+
         <h2>Component</h2>
-        <p>Component is just a function.</p>
+        <p>
+            React Component is a function or a class that produces HTML throught JSX and show to the user. 
+            It handles feedback from the user throght the "Event Handler".
+        </p>
         <ul>
-            <li>This function need the first letter as capital.</li>
-            <li>This function has to return the code to be rendered to the real DOM.</li>
-            <li>We can use empty tags like {"<> </>"} inside the components.</li>
+            <li>Component need the first letter as capital.</li>
+            <li>Component has to return the code to be rendered to the real DOM.</li>
+            <li>We must "wrap" the content inside component in one only tag like {"<div> </div>"}.</li>
+            <li>We can use empty tags like {"<> </>"} to wrap all content.</li>
+            <li><b>Nesting</b> tenet: One component can be show inside of another component.</li>
+            <li><b>Resuability</b> tenet: It is preferable that the component is reusable.</li>
+            <li><b>Configuration</b> tenet: We should be able to configure a component when it is created.</li>
         </ul>
         <p>When creating components, you have the choice between <b>three different ways</b>:</p>
         <ol>
             <li className="h3"><b>Funtional components</b> (also referred to as "presentational", "dumb" or "stateless" components) 
                 <ul>
                     <li>
-                        <p>Code:</p>
+                        <p>Code (Modern way):</p>
                         <div className="Code">
                             <p>
                                 {"const functionalComponent = () => {"}<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp; {"return <>some JSX</>"}<br/>
+                                {"}"}<br/><br/>
+                                {"export default functionalComponent;"}
+                            </p>
+                        </div>
+                        <p>Code (Old way):</p>
+                        <div className="Code">
+                            <p>
+                                {"const functionalComponent = function() {"}<br/>
                                 &nbsp;&nbsp;&nbsp;&nbsp; {"return <>some JSX</>"}<br/>
                                 {"}"}<br/><br/>
                                 {"export default functionalComponent;"}
@@ -102,41 +257,29 @@ const intro = () => {
                 </ul>
             </li>
         </ol>
-        
-
-
-
-        <h2>JSX</h2>
-        <p>Is a special JS <u>syntax extension</u> that produces react <u>elements</u>. Its use is optional, so react donsn't require it.</p>
+        <p className="Note"><b>Note: </b>The parentheses before the "return" is optional, but its use is nice to indent code.</p>
         <div className="h3">
-            <h3>JSX restrictions:</h3>
-            <ul>
-                <li>
-                    <p>The input "class" is not allowed, therefore we will use the tag "className".</p>
-                </li>
-                <li>
-                    <p>React permits only one root element per component.</p>
-                </li>
-            </ul>
-        </div>
-        <div className="h3">
-            <h3>We need to use curly braces {"{ }"} to use JS sintax inside on the JSX:</h3>
-            <p>The code is: </p>
+            <h3>Basic component index page</h3>
             <div className="Code">
                 <p>
-                    {"{"}Math.floor(Math.random()*2000){"}"}
+                    {"import React from 'react';"}<br/>
+                    {"import ReactDOM from 'react-dom';"}<br/>
+                    {""}<br/>
+                    {"// Create a react compont"}<br/>
+                    {"const App = () => {"}<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp; {"return <div>Hello!</div>;"}<br/>
+                    {"};"}<br/>
+                    {""}<br/>
+                    {"// Take the react component and show it on the screen"}<br/>
+                    {"ReacDOM.render("}<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp; {"<App/>,"}<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp; {"document.querySelector('#root')"}<br/>
+                    {");"}<br/>
                 </p>
             </div>
-            <p>The result will be someone random number between 0 and 2000:</p>
-            <div className="Result">
-                <p>
-                <JsInsideJsx/>
-                </p>
-            </div>
-            <p className="Note"><b>Note:</b> The code to reload the page is interesting, it is worth looking at.</p>
         </div>
         
-        
+
 
 
         <h2>React-DOM</h2>
@@ -145,6 +288,58 @@ const intro = () => {
         <div className="h3">
             <h3>Render method</h3>
             <p>The render method allow us to render one componet isolated if we want. Everything inside the render method will be renderized.</p>
+        </div>
+
+
+
+
+        <h2>Styling components</h2>
+        <p>We will see two ways of styling implement. </p>
+        <p>The <b>first</b> way is create one css file and import it, see:</p>
+        <p>The import code:</p>
+        <div className="Code">
+            <p>
+                {"import './PATH/TO/THE/CSS_FILE'"}
+            </p>
+        </div>
+        <p>The <b>second</b> way is called "Inline Style" and is usefull when we want to give style into one specific scope, see:</p>
+        <p>Code:</p>
+        <div className="Code">
+            <p>
+                {"import {Component} from"} "{"react"}" {";"}<br/><br/>
+                {"export default class CssInlineStyle extends Component {"}<br/><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; {"render() {"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"const ourStyle = {"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"backGroundColor: 'green',"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"font: 'inherit',"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"border: '3px solid red',"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"padding: '8px',"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"cursor: 'cell'"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"};"}<br/><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"const buttonText = 'This is a inline stylized button';"}<br/><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"function getButtonText(){"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"return 'Click on me';"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"}"}<br/><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"return <>"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"<button style={ourStyle} >"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"{buttonText}"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"</button>"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"<br/>"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"<button style={ourStyle} >"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"{getButtonText()}"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"</button>"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"</>"}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; {"}"}<br/>
+                {"}"}<br/>
+            </p>
+        </div>
+        <p className="Note"><b>Note: </b>We can use single or double quotes to pass an style name but by convention we use single quotes.</p>
+        <p className="Note"><b>Note: </b>We can easily make JSX reference to JS variables and we do it putting a JS code into a curly braces block.</p>
+        <p>Result:</p>
+        <div className="Result">
+            <p>
+                <CssInlineStyle></CssInlineStyle>
+            </p>
         </div>
 
 
@@ -214,6 +409,13 @@ const intro = () => {
 
 
         <h2>Understanding and using "state"</h2>
+        <p>We create a Object when we do this bellow:</p>
+        <div className="Code">
+            <p>
+                {"const variable = { text: 'foo', otherPropertie: '123' };"}<br/>
+            </p>
+        </div>
+        <p>In exemple above "variable" receive a object.</p>
         <p>A Class-Based way is called "smart" because inside one class we can have variables and other interesting properties.</p>
         <p>Whilst props allow you to pass data down the component tree (and hence trigger an UI update), state is used to change the component, well, state from within. Changes to state also trigger an UI update.</p>
         <p>
@@ -390,46 +592,6 @@ const intro = () => {
                     <TwoWayBind></TwoWayBind>
                 </p>
             </div>
-        </div>
-        
-
-
-
-        <h2>Styling components</h2>
-        <p>We will see two ways of styling implement. </p>
-        <p>The <b>first</b> way is create one css file and import it, see:</p>
-        <p>The import code:</p>
-        <div className="Code">
-            <p>
-                {"import './PATH/TO/THE/CSS_FILE'"}
-            </p>
-        </div>
-        <p>The <b>second</b> way is called "Inline Style" and is usefull when we want to give style into one specific scope, see:</p>
-        <p>Code:</p>
-        <div className="Code">
-            <p>
-                {"import {Component} from"} "{"react"}" {";"}<br/><br/>
-                {"export default class CssInlineStyle extends Component {"}<br/><br/>
-                &nbsp;&nbsp;&nbsp;&nbsp; {"render() {"}<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"const ourStyle = {"}<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"backGroundColor: 'green',"}<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"font: 'inherit',"}<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"border: '3px solid red',"}<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"padding: '8px',"}<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"cursor: 'cell'"}<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"};"}<br/><br/>
-                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"return <>"}<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"<button style={ourStyle} >This is one inline styled button</button>"}<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {"</>"}<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp; {"}"}<br/>
-                {"}"}<br/>
-            </p>
-        </div>
-        <p>Result:</p>
-        <div className="Result">
-            <p>
-                <CssInlineStyle></CssInlineStyle>
-            </p>
         </div>
     </div>
 }

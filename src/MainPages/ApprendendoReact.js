@@ -10,8 +10,8 @@ function ApprendendoReact() {
         <h1>React annotations</h1>
         <p>Developed by Facebook. A study by Rodrigo Fentanes.</p>
       </div>
-      <Intro/>
-      <ListsAndConditionals/>
+        <Intro/>
+        <ListsAndConditionals/> 
     </div>
   );
 }
