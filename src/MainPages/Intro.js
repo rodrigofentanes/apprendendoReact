@@ -28,7 +28,7 @@ const intro = () => {
             React uses different versions of JavaScript, so the preprocessor <b>Babel </b> 
             is required to compile and run the code within any brownser.
         </p>
-        <p>We can enter in <a href="https://babeljs.io/" target="_blank" title="click here and go to the page">babel</a> website to check the code and see how it looks like after be converted.</p>
+        <p>We can enter in <a href="https://babeljs.io/" target="_blank" title="click here and go to the page">babel</a> website and click on <b>try it</b> to check the code and see how it looks like after be converted.</p>
         <p>Babel converts the JSX code too.</p>
         
 
@@ -80,7 +80,18 @@ const intro = () => {
             </p>
         </div>
         <p className="Note"><b>Note: </b>If you want to know more about, access the site: <a href="https://github.com/facebook/create-react-app" target="_blank" title="click here and go to the page">https://github.com/facebook/create-react-app</a></p>
-        
+        <p>If you are cloning a git project, you need to do:</p>
+        <div className="Code">
+            <p>
+                npm i
+            </p>
+        </div>
+        <p>or</p>
+        <div className="Code">
+            <p>
+                yarn install
+            </p>
+        </div>
 
         
 
@@ -177,86 +188,87 @@ const intro = () => {
             <li>We must "wrap" the content inside component in one only tag like {"<div> </div>"}.</li>
             <li>We can use empty tags like {"<> </>"} to wrap all content.</li>
             <li><b>Nesting</b> tenet: One component can be show inside of another component.</li>
-            <li><b>Resuability</b> tenet: It is preferable that the component is reusable.</li>
+            <li><b>Reusability</b> tenet: It is preferable that the component is reusable.</li>
             <li><b>Configuration</b> tenet: We should be able to configure a component when it is created.</li>
         </ul>
-        <p>When creating components, you have the choice between <b>three different ways</b>:</p>
-        <ol>
-            <li className="h3"><b>Funtional components</b> (also referred to as "presentational", "dumb" or "stateless" components) 
-                <ul>
-                    <li>
-                        <p>Code (Modern way):</p>
-                        <div className="Code">
-                            <p>
-                                {"const functionalComponent = () => {"}<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp; {"return <>some JSX</>"}<br/>
-                                {"}"}<br/><br/>
-                                {"export default functionalComponent;"}
-                            </p>
-                        </div>
-                        <p>Code (Old way):</p>
-                        <div className="Code">
-                            <p>
-                                {"const functionalComponent = function() {"}<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp; {"return <>some JSX</>"}<br/>
-                                {"}"}<br/><br/>
-                                {"export default functionalComponent;"}
-                            </p>
-                        </div>
-                        <p>Result:</p>
-                        <div className="Result">
-                            <p>
-                                <FunctionalComponent/>
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-            <li className="h3">
-                <b>Other way to do one component</b> 
-                <p>Code:</p>
-                <div className="Code">
-                    <p>
-                        {"function OtherComponent() {"}<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp; {"return ("}<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"<>Some JSX code.</>"}<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp; {");"}<br/>
-                        {"}"}<br/><br/>
-                        {"export default OtherComponent;"}
-                    </p>
-                </div>
-                <p>Result:</p>
-                <div className="Result">
-                    <p>
-                        <OtherComponent/>
-                    </p>
-                </div>
-            </li>
-            <li className="h3"><b>Class-based components</b> (also referred to as "containers", "smart" or "stateful" components) 
-                <ul>
-                    <li>
-                        <p>Code:</p>
-                        <div className="Code">
-                            <p>
-                                {"import React, { Component } from 'react';"}<br/><br/>
-                                {"class ClassBasedComponent extends Component {"}<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp; {"render () {"}<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"return <>Some JSX code.</>"}<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp; {"}"}<br/>
-                                {"}"}<br/><br/>
-                                {"export default ClassBasedComponent;"}<br/>
-                            </p>
-                        </div>
-                        <p>Result:</p>
-                        <div className="Result">
-                            <p>
-                                <ClassBasedComponent/>
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-        </ol>
+        <p>When creating components, you have the choice between <b>two different ways</b>:</p>
+        <div className="h3">
+            <h3>Funtional components</h3> 
+            <p>Also referred to as "presentational", "dumb" or "stateless" components.</p> 
+            <p>Can produce JSX to show content to the user</p>
+            <p>Code (Modern way):</p>
+            <div className="Code">
+                <p>
+                    {"const functionalComponent = () => {"}<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp; {"return <>some JSX</>"}<br/>
+                    {"}"}<br/><br/>
+                    {"export default functionalComponent;"}
+                </p>
+            </div>
+            <p>Code (Old way):</p>
+            <div className="Code">
+                <p>
+                    {"const functionalComponent = function() {"}<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp; {"return <>some JSX</>"}<br/>
+                    {"}"}<br/><br/>
+                    {"export default functionalComponent;"}
+                </p>
+            </div>
+            <p>Result:</p>
+            <div className="Result">
+                <p>
+                    <FunctionalComponent/>
+                </p>
+            </div>
+            <br/><br/>
+            <h3>Other way to do one functional component</h3> 
+            <p>Code:</p>
+            <div className="Code">
+                <p>
+                    {"function OtherComponent() {"}<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp; {"return ("}<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"<>Some JSX code.</>"}<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp; {");"}<br/>
+                    {"}"}<br/><br/>
+                    {"export default OtherComponent;"}
+                </p>
+            </div>
+            <p>Result:</p>
+            <div className="Result">
+                <p>
+                    <OtherComponent/>
+                </p>
+            </div>
+        </div>
+        <div className="h3">
+            <h3>Class-based components</h3>
+            <p>Also referred to as "containers", "smart" or "stateful" components.</p>
+            <p>A Class-Based way is called "smart" because inside one class we can have variables and other interesting properties.</p>
+            <p>Can produce JSX to show content to the user.</p>
+            <p className="Note"><b>Note:</b> Hooks system, using function components, can produce JSX to show content to the user.</p>
+            <p>Can use the Lifecycle Method system to run code at specific points in time.</p>
+            <p className="Note"><b>Note:</b> Hooks system, using function components, can use Hooks to run code at specific points in time.</p>
+            <p>Can use the 'state' system to update content on the screen.</p>
+            <p className="Note"><b>Note:</b> Hooks system, using function components, can use Hooks to access state system and update content on screen.</p>
+            <p>Code:</p>
+            <div className="Code">
+                <p>
+                    {"import React, { Component } from 'react';"}<br/><br/>
+                    {"class ClassBasedComponent extends Component {"}<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp; {"render () {"}<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"return <>Some JSX code.</>"}<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp; {"}"}<br/>
+                    {"}"}<br/><br/>
+                    {"export default ClassBasedComponent;"}<br/>
+                </p>
+            </div>
+            <p>Result:</p>
+            <div className="Result">
+                <p>
+                    <ClassBasedComponent/>
+                </p>
+            </div>
+        </div>
         <p className="Note"><b>Note: </b>The parentheses before the "return" is optional, but its use is nice to indent code.</p>
         <div className="h3">
             <h3>Basic component index page</h3>
@@ -416,8 +428,9 @@ const intro = () => {
             </p>
         </div>
         <p>In exemple above "variable" receive a object.</p>
-        <p>A Class-Based way is called "smart" because inside one class we can have variables and other interesting properties.</p>
-        <p>Whilst props allow you to pass data down the component tree (and hence trigger an UI update), state is used to change the component, well, state from within. Changes to state also trigger an UI update.</p>
+        <p>We can use "state" within class-based components or Hooks system. "state" is a JS object that contains relevant data to a component.</p>
+        <p>Updatating "state" on a component causes the component to (almost) instantly rerender.</p>
+        <p>"state" can only be update using the "setState" function.</p>
         <p>
             The propertie "state" only can be used when we "extends" actual class/component to the "Component" class.
             State must be used with care, because it can make the app unpredictable and hard to manage.

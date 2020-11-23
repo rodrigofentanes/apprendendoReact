@@ -2,7 +2,8 @@ import ToggleContentJSX from '../EPListsAndConditionals/ToggleContentJSX';
 import ToggleContentJS from '../EPListsAndConditionals/ToggleContentJS';
 import OutputtingListWithMap from '../EPListsAndConditionals/OutputtingListWithMap';
 import ArrayManipulation from '../EPListsAndConditionals/ArrayManipulation';
-import {UserCommentList} from '../EPListsAndConditionals/UserCommentList';
+import UserCommentList from '../EPListsAndConditionals/UserCommentList';
+import Geolocation from '../EPListsAndConditionals/Geolocation';
 
 
 export const ListsAndConditionals = () => {
@@ -110,10 +111,49 @@ export const ListsAndConditionals = () => {
 
 
 
-        <h2></h2>
+        <h2>Component Lifecycle</h2>
+        <p>The lyfecycle components are part of the component they are in. These methods help to re-render specific things inside the component.</p>
+        <h3>Lifecycle Methods</h3>
+        <p><b>Constructor: </b>Good to do one-time setup.</p>
+        <p><b>Render: </b>Avoid doing anything besides returning JSX.</p>
+        <p><b>componentDidMount: </b>Good place to do data-loading!</p>
+        <p><b>componentDidUpdate: </b>Good place to do more data-loading when state/props change.</p>
+        <p><b>componentWillUnmount: </b>Good place to do cleanup (Especially for non-React stuff).</p>
+        <p><b>shouldComponentUpdate: </b>...</p>
+        <p><b>getDerivedStateFromProps: </b>...</p>
+        <p><b>getSnapshotBeforeUpdate: </b>...</p>
+
+
+
+
+        <h2>Seasons (Geolocation API)</h2>
+        <p>Here we will use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation" target="_blank" title="click here and go to the page">Geolocation API</a>.</p>
+        <p>We need to know about <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation" target="_blank" title="click here and go to the page">Callback functions</a>.</p>
+        <p>Inside the Console, we can go to "sensors" option and change the browser geolocalization.</p>
+        <Geolocation></Geolocation>
+
+
+
+
+        <h2>Advanced Styling</h2>
+        <p>In this example we use the Faker library. See more in <a href="https://github.com/Marak/faker.js" target="_blank" title="click here and go to the page">Faker.js</a></p>
+        <p>We need to install the dependency "styled-components" to use this type of styling.</p>
+        <p>Code:</p>
+        <div className="Code">
+            <p>
+                npm install styled-components --save
+            </p>
+        </div>
+        <p>Analyze the class below:</p>
         <div className="Result">
             <UserCommentList></UserCommentList>
         </div>
+        <p className="Note"><b>Note: </b>Inside this code above we have a perfect example of Reusability.</p>
+
+
+
+
+        <h2></h2>
         
         
     </div>

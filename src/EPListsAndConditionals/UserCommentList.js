@@ -1,24 +1,42 @@
+import {UserComment} from './UserComment';
+import {ApprovalCard} from './ApprovalCard';
+import faker from 'faker';
+import { Component } from 'react';
 
 
-export const UserCommentList = () =>{
-    return <>
-        <div className="comment">
-            <a href="/" className="avatar">
-                <img alt="avatar"/>
-            </a>
-            <div className="content">
-                <a href="/" className="author">
-                    Sam
-                </a>
-            </div>
-            <div className="metadata">
-                <span className="date">
-                    Today at 6:00pm
-                </span>
-            </div>
-            <div className="text">
-                Nice blog!
-            </div>
-        </div>
-    </>
+export default class UserCommentList extends Component {
+
+    
+
+    render() {
+        return <>
+            <h3>Approved</h3>
+            <UserComment
+                author={faker.name.findName()}
+                time={'this time'}
+                comment={'nice!'}
+                img={faker.image.animals()}
+            > 
+                Comment:
+            </UserComment>
+
+            <br/><br/>
+
+            <h3>Waiting approval</h3>
+            {/* This is a perfect exemple of Reusability */}
+            <ApprovalCard
+            >
+                <UserComment
+                    author={faker.name.findName()}
+                    time={'this time'}
+                    comment={'nice!'}
+                    img={faker.image.animals()}
+                >
+                    Comment:
+                </UserComment>
+            </ApprovalCard>
+            
+        </>
+    }
+    
 }
