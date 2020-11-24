@@ -1,20 +1,41 @@
-import FunctionalComponent from '../ExemplePages/FunctionalComponent';
-import OtherComponent from '../ExemplePages/OtherComponent';
-import JsInsideJsx  from '../ExemplePages/JsInsideJsx';
-import ClassBasedComponent  from '../ExemplePages/ClassBasedComponent';
-import PassingValuesFunctional from '../ExemplePages/PassingValuesFunctional';
-import PassingValuesClassBased from '../ExemplePages/PassingValuesClassBased';
-import ChildrenComponent from '../ExemplePages/ChildrenComponent';
-import StatePropertie from '../ExemplePages/StatePropertie';
-import ReRenderStateDOM from '../ExemplePages/ReRenderStateDOM';
-import { ReRenderStateDOMIntoHook } from '../ExemplePages/ReRenderStateDOMIntoHook';
-import PassingExternalMethod from '../ExemplePages/PassingExternalMethod';
-import ValueToFunction from '../ExemplePages/ValueToFunction';
-import TwoWayBind from '../ExemplePages/TwoWayBind';
-import CssInlineStyle from '../ExemplePages/CssInlineStyle';
+import FunctionalComponent from '../components/ExemplePages/FunctionalComponent';
+import OtherComponent from '../components/ExemplePages/OtherComponent';
+import JsInsideJsx  from '../components/ExemplePages/JsInsideJsx';
+import ClassBasedComponent  from '../components/ExemplePages/ClassBasedComponent';
+import PassingValuesFunctional from '../components/ExemplePages/PassingValuesFunctional';
+import PassingValuesClassBased from '../components/ExemplePages/PassingValuesClassBased';
+import ChildrenComponent from '../components/ExemplePages/ChildrenComponent';
+import StatePropertie from '../components/ExemplePages/StatePropertie';
+import ReRenderStateDOM from '../components/ExemplePages/ReRenderStateDOM';
+import { ReRenderStateDOMIntoHook } from '../components/ExemplePages/ReRenderStateDOMIntoHook';
+import PassingExternalMethod from '../components/ExemplePages/PassingExternalMethod';
+import ValueToFunction from '../components/ExemplePages/ValueToFunction';
+import TwoWayBind from '../components/ExemplePages/TwoWayBind';
+import CssInlineStyle from '../components/ExemplePages/CssInlineStyle';
 
-const intro = () => {
+import ReactMarkdown from 'react-markdown';
+
+
+export const Intro = () => {
+
+    const markdown = `
+    # Header 1
+    ## Header 2
+
+    _ italic _
+
+        ** bold **
+
+            <b> bold Html </b>
+        }
+    }
+    `;
+
     return <div>
+
+        
+        <ReactMarkdown source={markdown} />
+
         <h2>What is React?</h2>
         <p>React is a <u>JS Library</u> for building <u>User Interfaces</u>.</p>
         <p>This user interfaces is build throught <u>components</u>.</p>
@@ -104,12 +125,12 @@ const intro = () => {
         <p><b>README.md: </b>Instructions on how to use this project.</p>
         <div className="h3">
             <h3>Other types of directories (patterns)</h3>
-            <p><b>assets: </b>Folder that...</p>
-            <p><b>components: </b>Folder that...</p>
-            <p><b>helpers: </b>Folder that...</p>
-            <p><b>hooks: </b>Folder that...</p>
-            <p><b>service: </b>Folder that...</p>
-            <p><b>views: </b>Folder that...</p>
+            <p><b>assets: </b>Folder that stores ...</p>
+            <p><b>components: </b>Folder that stores...</p>
+            <p><b>helpers: </b>Folder that stores ...</p>
+            <p><b>hooks: </b>Folder that stores...</p>
+            <p><b>service: </b>Folder that stores...</p>
+            <p><b>views: </b>Folder that stores...</p>
         </div>
 
 
@@ -608,5 +629,3 @@ const intro = () => {
         </div>
     </div>
 }
-
-export default intro;

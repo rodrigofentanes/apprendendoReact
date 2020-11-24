@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/index.css';
-import ApprendendoReact from './MainPages/ApprendendoReact';
+import './assets/css/index.css';
+import ApprendendoReact from './views/ApprendendoReact';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

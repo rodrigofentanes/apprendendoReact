@@ -1,4 +1,4 @@
-import '../css/SeasonDisplay.css';
+import '../../assets/css/SeasonDisplay.css';
 
 const seasonConfig = {
     Summer: {

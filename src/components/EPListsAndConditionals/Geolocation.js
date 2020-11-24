@@ -41,6 +41,8 @@ export default class Geolocation extends Component{
 
     // it was part of lifecycle // this is the right way to do data-loading
     componentDidMount(){
+        console.log('My component was just mounted!');
+
         window.navigator.geolocation.getCurrentPosition(
             // Here are two callbacks function
             (position) => {
@@ -56,14 +58,15 @@ export default class Geolocation extends Component{
             }
         );
 
-        setInterval(
-            () => {
-                this.setState({
-                    time: new Date().toLocaleTimeString()
-                })
-            }, 
-            1000
-        )
+        // ! UNCOMMENT THIS TO SEE componentDidUpdate() WORKING !
+        // setInterval(
+        //     () => {
+        //         this.setState({
+        //             time: new Date().toLocaleTimeString()
+        //         })
+        //     }, 
+        //     1000
+        // )
     }
 
     // it was part of lifecycle
@@ -124,7 +127,8 @@ export default class Geolocation extends Component{
 
 
         return <>
-            <p><b>Local time is: </b>{this.state.time}</p>
+            {/* ! UNCOMMENT THIS TO SEE componentDidUpdate() WORKING ! */}
+            {/* <p><b>Local time is: </b>{this.state.time}</p> */}
             {this.renderContent()}
         </>
     }

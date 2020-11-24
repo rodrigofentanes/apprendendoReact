@@ -5,9 +5,6 @@ import { Component } from 'react';
 
 
 export default class UserCommentList extends Component {
-
-    
-
     render() {
         return <>
             <h3>Approved</h3>
@@ -35,8 +32,6 @@ export default class UserCommentList extends Component {
                     Comment:
                 </UserComment>
             </ApprovalCard>
-            
         </>
-    }
-    
+    }   
 }
