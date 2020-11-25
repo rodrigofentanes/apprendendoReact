@@ -1,0 +1,44 @@
+.NoteStyle{
+    background-color: yellow;
+    padding: 15px;
+    padding-bottom: .2em;
+    padding-top: .2em;
+    margin-top: 30px;
+}
+
+.CodeStyle{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f1f1f1;
+    color: blue;
+    font-size: 1.3em;
+    padding-top: 0.01em;
+    overflow: auto;
+    white-space: nowrap;
+    font-weight: 1900;
+    border: 1px solid blue;
+    margin:3px 0px;
+}
+
+.ChapterStyle{
+    text-align: left;
+    text-decoration: overline;
+    font-size: 1.5em;
+    margin-top:35px;
+}
+
+.ExplanationStyle{
+    box-shadow: rgba(178, 213, 245, 1) 0px 0px 100px 0px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    padding: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top:30px;
+}
+
+.ResultStyle{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(85, 175, 231, 0.75);
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom:10px;
+}

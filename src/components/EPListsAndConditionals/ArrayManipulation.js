@@ -29,7 +29,7 @@ export default class ArrayManipulation extends Component {
 
     nameChangedHandler = (event, id) => {
         // findIndex() method returns the index of the first element in an array that pass a test (provided as a function). 
-        const capturedDataIndex = this.state.data.findIndex( d=>{
+        const capturedDataIndex = this.state.data.findIndex( d => {
             return d.id === id;
         });
 
@@ -73,5 +73,4 @@ export default class ArrayManipulation extends Component {
             <button onClick={this.refreshPage}>Click here to refresh page and restart values</button> 
         </>)
     }
-    
 };
