@@ -16,7 +16,7 @@ export const Paragraph = ({items}) => {
                 {body.explanation && <BodyContent label="Explanation" styleName="ExplanationStyle">{body.explanation}</BodyContent>}
                 {body.code && <BodyContent label='Code' styleName="CodeStyle" ><ReactMarkdown source={body.code}/></BodyContent>}
                 {body.result && <BodyContent label="Result" styleName="ResultStyle">{body.result}</BodyContent>}
-                {body.note && <BodyContent label="Note" styleName="NoteStyle">{body.note}</BodyContent> }
+                {body.note && <BodyContent label="Note" styleName="NoteStyle">{body.note}</BodyContent>}
             </>
         });
         return <div key={index}>

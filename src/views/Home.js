@@ -1,28 +1,28 @@
 
 import { Paragraph } from '../components/Paragraph/Paragraph';
 
-import JsInsideJsx  from '../components/ExemplePages/JsInsideJsx';
-import FunctionalComponent from '../components/ExemplePages/FunctionalComponent';
-import OtherComponent from '../components/ExemplePages/OtherComponent';
-import ClassBasedComponent  from '../components/ExemplePages/ClassBasedComponent';
-import PassingValuesFunctional from '../components/ExemplePages/PassingValuesFunctional';
-import ChildrenComponent from '../components/ExemplePages/ChildrenComponent';
-import StatePropertie from '../components/ExemplePages/StatePropertie';
-import ReRenderStateDOM from '../components/ExemplePages/ReRenderStateDOM';
-import { ReRenderStateDOMIntoHook } from '../components/ExemplePages/ReRenderStateDOMIntoHook';
-import PassingExternalMethod from '../components/ExemplePages/PassingExternalMethod';
-import ValueToFunction from '../components/ExemplePages/ValueToFunction';
-import TwoWayBind from '../components/ExemplePages/TwoWayBind';
-import CssInlineStyle from '../components/ExemplePages/CssInlineStyle';
+import JsInsideJsx  from './ExemplePages/JsInsideJsx';
+import FunctionalComponent from './ExemplePages/FunctionalComponent';
+import OtherComponent from './ExemplePages/OtherComponent';
+import ClassBasedComponent  from './ExemplePages/ClassBasedComponent';
+import PassingValuesFunctional from './ExemplePages/PassingValuesFunctional';
+import ChildrenComponent from './ExemplePages/ChildrenComponent';
+import StatePropertie from './ExemplePages/StatePropertie';
+import ReRenderStateDOM from './ExemplePages/ReRenderStateDOM';
+import { ReRenderStateDOMIntoHook } from './ExemplePages/ReRenderStateDOMIntoHook';
+import PassingExternalMethod from './ExemplePages/PassingExternalMethod';
+import ValueToFunction from './ExemplePages/ValueToFunction';
+import TwoWayBind from './ExemplePages/TwoWayBind';
+import CssInlineStyle from './ExemplePages/CssInlineStyle';
 
-import ToggleContentJSX from '../components/EPListsAndConditionals/ToggleContentJSX';
-import ToggleContentJS from '../components/EPListsAndConditionals/ToggleContentJS';
-import OutputtingListWithMap from '../components/EPListsAndConditionals/OutputtingListWithMap';
-import ArrayManipulation from '../components/EPListsAndConditionals/ArrayManipulation';
-import Geolocation from '../components/EPListsAndConditionals/Geolocation';
+import ToggleContentJSX from './ExemplePages/ToggleContentJSX';
+import ToggleContentJS from './ExemplePages/ToggleContentJS';
+import OutputtingListWithMap from './ExemplePages/OutputtingListWithMap';
+import ArrayManipulation from './ExemplePages/ArrayManipulation';
+import Geolocation from './ExemplePages/Geolocation';
 
-import UserCommentList from '../components/AdvancedConcepts/UserCommentList';
-import PuttingAllTogether from '../components/AdvancedConcepts/PuttingAllTogether';
+import UserCommentList from './ExemplePages/UserCommentList';
+import PuttingAllTogether from './ExemplePages/PuttingAllTogether';
 
 // ALLOWED ITEMS
 // title: '',
