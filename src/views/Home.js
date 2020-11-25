@@ -1619,10 +1619,6 @@ const items = [
                     <p><b>getSnapshotBeforeUpdate: </b>...</p>
                 </>
             },
-            {
-                note:<>
-                </>
-            },
         ]
     },
     {
