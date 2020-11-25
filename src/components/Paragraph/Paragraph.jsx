@@ -6,7 +6,10 @@ import { Title } from '../Title/Title';
 import { Explanation } from '../Explanation/Explanation';
 import ReactMarkdown from 'react-markdown';
 
-
+// hashmap ?
+// list, key and content ?
+// dado -> padrao de dado -> componente -> renderização
+// componetização
 
 export const Paragraph = ({items}) => {
     const renderTitle = items.map( item => {
