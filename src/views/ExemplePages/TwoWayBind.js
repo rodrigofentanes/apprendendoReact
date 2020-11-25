@@ -1,4 +1,4 @@
-import {Component, bind} from 'react';
+import {Component} from 'react';
 import { TwoWayBindForm } from './TwoWayBindForm';
 
 export default class TwoWayBind extends Component {

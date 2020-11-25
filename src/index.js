@@ -1,8 +1,14 @@
+import reportWebVitals from './reportWebVitals';
+
+//dependencies
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+//views
+import { ApprendendoReact } from './views/ApprendendoReact';
+
+//assets
 import './assets/css/index.css';
-import ApprendendoReact from './views/ApprendendoReact';
-import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,6 +1,7 @@
+//dependecies
+import React from 'react';
 
-import { Paragraph } from '../components/Paragraph/Paragraph';
-
+//views
 import JsInsideJsx  from './ExemplePages/JsInsideJsx';
 import FunctionalComponent from './ExemplePages/FunctionalComponent';
 import OtherComponent from './ExemplePages/OtherComponent';
@@ -14,17 +15,21 @@ import PassingExternalMethod from './ExemplePages/PassingExternalMethod';
 import ValueToFunction from './ExemplePages/ValueToFunction';
 import TwoWayBind from './ExemplePages/TwoWayBind';
 import CssInlineStyle from './ExemplePages/CssInlineStyle';
-
 import ToggleContentJSX from './ExemplePages/ToggleContentJSX';
 import ToggleContentJS from './ExemplePages/ToggleContentJS';
 import OutputtingListWithMap from './ExemplePages/OutputtingListWithMap';
 import ArrayManipulation from './ExemplePages/ArrayManipulation';
 import Geolocation from './ExemplePages/Geolocation';
-
 import UserCommentList from './ExemplePages/UserCommentList';
 import PuttingAllTogether from './ExemplePages/PuttingAllTogether';
 
-// ALLOWED ITEMS
+//css
+
+//components
+import { Paragraph } from '../components/Paragraph/Paragraph';
+
+// ******************************
+// ********ALLOWED ITEMS*********
 // title: '',
 // body: [],
 //  //   chapter: '',
@@ -32,6 +37,7 @@ import PuttingAllTogether from './ExemplePages/PuttingAllTogether';
 //  //   code: ``,
 //  //   result:<></>,
 //  //   note:<></>,
+// ******************************
 
 const items = [
     {
@@ -99,7 +105,7 @@ const items = [
             },
             {
                 note:<>
-                    <p>If you want to know more about, access the site: <a href="https://github.com/facebook/create-react-app" target="_blank" title="click here and go to the page">https://github.com/facebook/create-react-app</a>.</p>
+                    <p>If you want to know more about, access the site: <a href="https://github.com/facebook/create-react-app" target="_blank" rel="noreferrer" title="click here and go to the page">https://github.com/facebook/create-react-app</a>.</p>
                 </>
             },
             {
@@ -143,7 +149,7 @@ const items = [
                         React uses different versions of JavaScript, so the preprocessor <b>Babel </b> 
                         is required to compile and run the code within any brownser.
                     </p>
-                    <p>We can enter in <a href="https://babeljs.io/" target="_blank" title="click here and go to the page">babel</a> website and click on <b>try it</b> to check the code and see how it looks like after be converted.</p>
+                    <p>We can enter in <a href="https://babeljs.io/" target="_blank" rel="noreferrer" title="click here and go to the page">babel</a> website and click on <b>try it</b> to check the code and see how it looks like after be converted.</p>
                     <p>Babel converts the JSX code too.</p>
                 </>
             },
@@ -215,7 +221,7 @@ const items = [
             {
                 note:<>
                     <p>Execute this code above inside the project folder.</p>
-                    <p>We can access the site on port <a href="http://localhost:3000/" target="_blank" title="click here and go to the page">http://localhost:3000/</a> or we can use the port given by the server itself, it will look like <b>http://192.168.0.6/</b> and it pops up as soon as the server starts.</p>
+                    <p>We can access the site on port <a href="http://localhost:3000/" target="_blank" rel="noreferrer" title="click here and go to the page">http://localhost:3000/</a> or we can use the port given by the server itself, it will look like <b>http://192.168.0.6/</b> and it pops up as soon as the server starts.</p>
                 </>
             },
         ]
@@ -782,7 +788,7 @@ const items = [
             },
             {
                 note:<>
-                    <p>See more supported event listeners in the link <a href="https://reactjs.org/docs/events.html#supported-events">React Supported Events</a></p>
+                    <p>See more supported event listeners in the link <a href="https://reactjs.org/docs/events.html#supported-events" target="_blank" rel="noreferrer" title="click here and go to the page">React Supported Events</a></p>
                 </>
             },
             {
@@ -1480,13 +1486,13 @@ const items = [
             {
                 explanation:<>
                     <p>
-                        We will need to know about <a href="https://www.w3schools.com/jsref/jsref_splice.asp" target="_blank" title="click here and go to the page">splice( )</a> method.
+                        We will need to know about <a href="https://www.w3schools.com/jsref/jsref_splice.asp" target="_blank" rel="noreferrer" title="click here and go to the page">splice( )</a> method.
                     </p>
                     <p>
-                        We will need to know about <a href="https://www.w3schools.com/jsref/jsref_map.asp" target="_blank" title="click here and go to the page">map( )</a> method.
+                        We will need to know about <a href="https://www.w3schools.com/jsref/jsref_map.asp" target="_blank" rel="noreferrer" title="click here and go to the page">map( )</a> method.
                     </p>
                     <p>
-                        We will need to know about <a href="https://www.w3schools.com/jsref/jsref_findindex.asp" target="_blank" title="click here and go to the page">findIndex( )</a> method.
+                        We will need to know about <a href="https://www.w3schools.com/jsref/jsref_findindex.asp" target="_blank" rel="noreferrer" title="click here and go to the page">findIndex( )</a> method.
                     </p>
                     <p>
                         The "key" prop is one important propertie you should add when render lists of data.
@@ -1626,8 +1632,8 @@ const items = [
         body:[
             {
                 explanation:<>
-                    <p>Here we will use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation" target="_blank" title="click here and go to the page">Geolocation API</a>.</p>
-                    <p>We need to know about <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation" target="_blank" title="click here and go to the page">Callback functions</a>.</p>
+                    <p>Here we will use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation" target="_blank" rel="noreferrer" title="click here and go to the page">Geolocation API</a>.</p>
+                    <p>We need to know about <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation" target="_blank" rel="noreferrer" title="click here and go to the page">Callback functions</a>.</p>
                     <p>Inside the Console, we can go to "sensors" option and change the browser geolocalization.</p>
                 </>
             },
@@ -1751,7 +1757,7 @@ const items = [
         body:[
             {
                 explanation:<>
-                    <p>In this example we use the Faker library. See more in <a href="https://github.com/Marak/faker.js" target="_blank" title="click here and go to the page">Faker.js</a></p>
+                    <p>In this example we use the Faker library. See more in <a href="https://github.com/Marak/faker.js" target="_blank" rel="noreferrer" title="click here and go to the page">Faker.js</a></p>
                     <p>We need to install the dependency "styled-components" to use this type of styling.</p> 
                 </>
             },

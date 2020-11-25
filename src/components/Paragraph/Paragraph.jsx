@@ -1,7 +1,14 @@
-import { BodyContent } from '../BodyContent/BodyContent';
-import '../BodyContent/style.css';
-import { Title } from '../Title/Title';
+//dependencies
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
+
+//views
+import { BodyContent } from '../BodyContent/BodyContent';
+import { Title } from '../Title/Title';
+
+//css
+import '../BodyContent/style.css';
+
 
 // hashmap ?
 // list, key and content ?
@@ -9,6 +16,7 @@ import ReactMarkdown from 'react-markdown';
 // componetização
 
 export const Paragraph = ({items}) => {
+
     const renderTitle = items.map( (item, index) => {
         const renderBody = item.body.map(body => {
             return <>      
@@ -19,10 +27,10 @@ export const Paragraph = ({items}) => {
                 {body.note && <BodyContent label="Note" styleName="NoteStyle">{body.note}</BodyContent>}
             </>
         });
-        return <div key={index}>
+        return <React.Fragment key={index}>
             { item.title ? <Title>{`${index+1} - ${item.title} `}</Title> : <br/> }
             {renderBody}
-        </div>
+        </React.Fragment>
     });
 
     return <> 
