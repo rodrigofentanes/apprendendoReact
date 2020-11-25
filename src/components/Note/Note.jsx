@@ -1,9 +1,10 @@
 import { NoteStyle } from './style';
+import { LocationLabel } from '../../assets/css/style';
 
 export const Note = (props) => {
     return <>
-        <p><b>Note:</b></p>
         <NoteStyle>
+            <LocationLabel>Note</LocationLabel>
             {props.children}
         </NoteStyle>
     </>

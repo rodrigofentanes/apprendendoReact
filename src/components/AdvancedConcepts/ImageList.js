@@ -1,4 +1,3 @@
-import { image } from 'faker';
 import {ImageWrapper} from '../../assets/css/Styling';
 
 export const ImageList = (props) => {

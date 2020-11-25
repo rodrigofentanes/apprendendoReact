@@ -1,9 +1,10 @@
 import { ResultStyle } from './style';
+import { LocationLabel } from '../../assets/css/style';
 
 export const Result = (props) => {
     return <>
-        <p><b>Result:</b></p>
         <ResultStyle>
+            <LocationLabel>Result</LocationLabel>
             {props.children}
         </ResultStyle>
     </>

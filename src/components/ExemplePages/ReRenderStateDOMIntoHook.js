@@ -6,7 +6,7 @@ export const ReRenderStateDOMIntoHook = props => {
         window.location.reload(false);
     }
 
-    // ! Here we don't destructure the receiver stateArray 
+    // ! Here we don't destructure the receiver stateArray !
     // const stateArray = useState({
     //     persons: [
     //         {name:'FullHouse', age:18},
@@ -15,7 +15,7 @@ export const ReRenderStateDOMIntoHook = props => {
     //     ]
     // });
 
-    // ? Here we destructure the receiving constant 
+    // ! Here we destructure the receiving constant !
     // inside the destructured array we can use any name that we chose
     const [ personsState, setPersonsState ] = useState({
         persons: [

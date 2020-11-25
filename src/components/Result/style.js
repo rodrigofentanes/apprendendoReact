@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const ResultStyle = styled.div`
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: cadetblue;
+    background-color: rgba(85, 175, 231, 0.75);
     margin-bottom: 15px;
-    padding: 15px;
-    padding-left: 1.2em;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom:10px;
 `

@@ -22,15 +22,6 @@ export const Note = styled.div`
     padding-bottom: .2em;
 `
 
-export const TextInput = {
-    width: '100%',
-    padding: '12px 20px',
-    margin: '8px 0',
-    display: 'inline-block',
-    border: '1px solid #ccc',
-    borderRadius: '4px',
-    boxSizing: 'border-box',
-};
 
 export const ImageWrapper = styled.img`
     display: block;
@@ -40,3 +31,13 @@ export const ImageWrapper = styled.img`
     margin-bottom: 15px;
     transition: width 1s;
 `
+
+export const TextInput = {
+    width: '100%',
+    padding: '12px 20px',
+    margin: '8px 0',
+    display: 'inline-block',
+    border: '1px solid #ccc',
+    borderRadius: '4px',
+    boxSizing: 'border-box',
+};
