@@ -17,7 +17,7 @@ import { Translator } from '../../views/MiniProjects/Translator/Translator';
 //  //   note:<></>,
 // ******************************
 
-export const api = [
+export const apis = [
     
     {
         title:'Seasons',
@@ -36,18 +36,12 @@ export const api = [
 
                 export default class Geolocation extends Component{
 
-                    // SETTING 'STATE' HERE OR INSIDE THE CONSTRUCTOR IS THE SAME
-                    // BABEL DEPENDENCY CONVERTS THIS CODE BELLOW IN A CONSTRUCTOR
                     state = {
                         lat: null,
                         long: null,
                         errorMessage: '',
                         time: '',
                     };
-
-                    // it was part of lifecycle // this is the right way to do data-loading
-                    componentDidMount(){
-                        console.log('My component was just mounted!');
 
                         window.navigator.geolocation.getCurrentPosition(
                             // Here are two callbacks function
@@ -63,11 +57,6 @@ export const api = [
                                 })
                             }
                         );
-                    }
-
-                    // it was part of lifecycle
-                    componentDidUpdate(){
-                        console.log('My component was just update - it rerendered!');
                     }
 
                     renderContent() {
@@ -127,7 +116,6 @@ export const api = [
                 export const SeasonsDisplay = (props) => {
                     const season = getSeason(props.lat, new Date().getMonth());
                     
-                    // WE CAN DO TOO // const text = season === 'Winter' ? 'Burr, it is chilly' : 'Lets hit the beach';
                     const {text} = seasonConfig[season]; // here we get only the text propertie
 
                     return <>
@@ -274,7 +262,6 @@ export const api = [
             {
                 explanation:<>
                     <p>We will consum the <a href="https://www.mediawiki.org/wiki/API:Search" target="_blank" rel="noreferrer" title="click here and go to the page">wikipédia search API</a> .</p>
-                    <p>Bellow, we will see the idea construction steps.</p>
                 </>
             },
             {
@@ -351,7 +338,162 @@ export const api = [
         body:[
             {
                 code:`
-                
+                // dependencies
+                import {useState} from 'react';
+
+                // components
+                import { Dropdown } from './components/Dropdown';
+                import { Convert } from './components/Convert';
+                import { LanguagesList } from './data/LanguagesList';
+
+                //*****************WARNING*******************
+                //*******************************************
+                // This is a paid API.
+                // Only works for free on localhost:3000
+                // https://cloud.google.com/translate/docs/reference/rest/v2/translate
+                //*******************************************
+
+                export const Translator = () => {
+                    const [language, setLanguage] = useState(LanguagesList[0]);
+                    const [text, setText] = useState('');
+                    const [detected, setDetected] = useState('');
+
+                    const renderLanguage = LanguagesList.map((lang) => {
+                        if(lang.value===detected){
+                            return <>{lang.label}</>
+                        }
+
+                        return null
+                    })
+
+                    return <>
+                        <h1>Translator</h1>
+                        <label>Enter a text:</label> <br/>
+                        <input 
+                            placeholder='type here...'
+                            value = {text} 
+                            onChange = {(e) => setText(e.target.value)}
+                        ></input> <br/>
+                        <p>Language detected is: <b> { renderLanguage } </b></p>
+                        <hr/>
+                        <Dropdown
+                            label="Translate to:: "
+                            options={LanguagesList}
+                            selected={language}
+                            onSelectedChange={setLanguage}
+                        ></Dropdown>
+                        <hr/>
+                        <label>Translation:</label> <br/>
+                        <Convert
+                            text={text}
+                            language={language}
+                            onDetectedChange={setDetected}
+                        ></Convert>
+                    </>
+                }
+                `
+            },
+            {
+                code:`
+                //dependencies
+                import {useState, useEffect, useRef} from 'react';
+
+                //css
+                import '../assets/translator.css';
+
+                export const Dropdown = ({ label, options, selected, onSelectedChange }) => {
+                    
+                    const [open, setOpen] = useState(false);
+                    const ref = useRef();
+
+                    useEffect(() => {
+                        const onBodyClick = (e) => {
+                            if (ref.current.contains(e.target)){
+                                return;
+                            }
+                            setOpen(false);
+                        };
+                        
+                        document.body.addEventListener('click', onBodyClick);
+
+                        return () => {
+                            document.body.removeEventListener('click', onBodyClick);
+                        };
+                    }, []);
+
+                    const renderedOptions = options.map((option) => {
+                        if(option.value === selected.value){
+                            return null;
+                        }
+                        return <>
+                            <div
+                                key={option.value}
+                                onClick={() => onSelectedChange(option)}
+                            >
+                                <button>{option.label}</button>
+                            </div>
+                        </>
+                    });
+
+                    return <>
+                        <div ref={ref}>
+                            <div onClick={() => setOpen(!open)}>
+                                <div>
+                                    {label}
+                                    <b>{selected.label}</b> <br/>
+                                    <button>change language</button>
+                                </div>
+                                <table className={ open ? 'visible' : 'not-visible'} >
+                                    <tbody>
+                                        <tr>
+                                            <td>{renderedOptions}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </>
+                }
+                `
+            },
+            {
+                code:`
+                // dependencies
+                import {useState, useEffect} from 'react';
+                import axios from 'axios';
+
+                export const Convert = ({language,text, onDetectedChange}) => {
+                    const [translated, setTranslated] = useState('')
+                    const [debouncedText, setDebouncedText] = useState(text)
+                    
+                    useEffect(() => {
+                            const timerId = setTimeout(() => {
+                                setDebouncedText(text);
+                            }, 1000);
+                            return () => {
+                                clearTimeout(timerId);
+                            };
+                    }, [text])
+
+                    useEffect(() => {
+                        const doTransLation = async () => {
+                            const {data} = await axios.post('https://translation.googleapis.com/language/translate/v2', {}, {
+                                params: {
+                                    q: text,
+                                    target: language.value,
+                                    key: 'AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM'
+                                }
+                            });
+                            setTranslated(data.data.translations[0].translatedText)
+                            onDetectedChange(data.data.translations[0].detectedSourceLanguage)
+                        };
+                        doTransLation();
+                    }, [language,debouncedText])
+
+                    return <>
+                        <b><span dangerouslySetInnerHTML={{ __html: translated}} ></span></b> 
+                    </>
+                }
                 `
             },
             {

@@ -1,7 +1,8 @@
 .visible {
-    visibility: visible;
-  }
+  display: inline;
+}
   
 .not-visible {
-visibility: collapse;
+  display: none;
+  
 }

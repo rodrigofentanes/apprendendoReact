@@ -1,6 +1,6 @@
-import { examples } from './dataViews/examples';
+import { apps } from './dataViews/apps';
 import { intro } from './dataViews/intro';
-import { api } from './dataViews/api';
+import { apis } from './dataViews/apis';
 import { advanced } from './dataViews/advanced';
 import { styling } from './dataViews/styling';
 
@@ -21,13 +21,13 @@ export const dataRoute = [
         rBody: [...advanced]
     },
     {
-        route:'/examples',
-        pageName:'Examples',
-        rBody: [...examples]
+        route:'/apps',
+        pageName:'App\'s',
+        rBody: [...apps]
     }, 
     {
-        route:'/api',
+        route:'/apis',
         pageName:'API\'s',
-        rBody: [...api]
+        rBody: [...apis]
     },
 ]

@@ -14,7 +14,7 @@ import { IndexGetter } from '../../views/MiniProjects/IndexGetter/IndexGetter';
 //  //   note:<></>,
 // ******************************
 
-export const examples = [
+export const apps = [
     {
         title:'Index Getter',
         body:[

@@ -43,6 +43,7 @@
     .header a {
         float: none;
         display: block;
+        position: static;
         text-align: left;
     }
 

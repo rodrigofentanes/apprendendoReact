@@ -15,22 +15,32 @@
 
 export const advanced = [
     {
-        title:'Axios vs Fetch',
+        title:'HTTP requests',
         body:[
             {
+                chapter:'Fetch'
+            },
+            {
                 explanation:<>
-                    <p>"Axios" is a stand alone 3rd party package. Uses a more professional approach. To install axios we need to do:</p>
+                    <p>"Fetch" is a function built into modern browsers, so we dont need to install it. Its a low level function to handler with basic data.</p>
+                </>
+            },
+            {
+                chapter:'Axios'
+            },
+            {
+                explanation:<>
+                    <p>
+                        "Axios" is a stand alone 3rd party package. Uses a more professional approach. 
+                        In a nutshell, Axios is a Javascript library used to make HTTP requests from node.js or XMLHttpRequests from the browser that also supports the ES6 Promise API.
+                    </p>
+                    <p>To install axios inside our project, we need to do:</p>
                 </>
             },
             {
                 code:`
                 npm install --save axios
                 `
-            },
-            {
-                explanation:<>
-                    <p>"Fetch" is a function built into modern browsers, so we dont need to install it. Its a low level function to handler with basic data.</p>
-                </>
             },
         ]
     },
@@ -39,24 +49,40 @@ export const advanced = [
         body:[
             {
                 explanation:<>
+                    <p>"Hooks" is a way to write reusable code, instead of more classic techniques like inheritance.</p>
+                    <p>We can see more aboute hooks <a href="https://reactjs.org/docs/hooks-reference.html" target="_blank" rel="noreferrer" title="click here and go to the page">here</a>.</p>
+                </>
+            },
+            {
+                chapter:'Primitive hooks'
+            },
+            {
+                explanation:<>
                     <p><b>useState:  </b>Hooks is a function that lets you use "state" in a functional component</p>
                     <p><b>useEffect:  </b>Hooks is a function that lets you use something like "lifecycle methods" in a functional component</p>
                     <p><b>useRef:  </b>Hooks is a function that lets you create a "ref" in a function component</p>
+                    <p><b>useContext: </b> </p>
+                    <p><b>useReducer: </b> </p>
+                    <p><b>useCallback: </b> </p>
+                    <p><b>useMemo: </b> </p>
+                    <p><b>useImperativeHandle: </b> </p>
+                    <p><b>useLayoutEffect: </b> </p>
+                    <p><b>useDebugValue: </b> </p>
                 </>
             },
             {
-                note:<>
-                    <p>Hooks are a way to write reusable code, instead of more classic techniques like inheritance.</p>
-                </>
+                chapter:'Custom Hooks'
             },
             {
-                note:<>
-                    <p>See  <a href="https://reactjs.org/docs/hooks-reference.html" target="_blank" rel="noreferrer" title="click here and go to the page">here</a> to see more about hooks.</p>
+                explanation:<>
+                    <p><b>useCustomHook: </b>Is a union of more than one primitive hook. We can create it.</p>
                 </>
             },
-            {
-                chapter:'Primitive Hooks'
-            },
+        ]
+    },
+    {
+        title:'useState Hook',
+        body: [
             {
                 explanation:<>
                     <p><b>useState: </b>Returns one value, <b>state</b>, and one function, <b>setState</b>, to update this value.</p>
@@ -74,6 +100,11 @@ export const advanced = [
                 setState(newState);
                 `
             },
+        ]
+    },
+    {
+        title:'useEffect Hook',
+        body: [
             {
                 explanation:<>
                     <p><b>useEffect: </b>Allows function components to use something like lifecycle meythods.</p>
@@ -170,55 +201,7 @@ export const advanced = [
                         });
                 }, []);
                 `
-            },
-            {
-                explanation:<>
-                    <p><b>useContext: </b> </p>
-                </>
-            },
-            {
-                explanation:<>
-                    <p><b>useReducer: </b> </p>
-                </>
-            },
-            {
-                explanation:<>
-                    <p><b>useCallback: </b> </p>
-                </>
-            },
-            {
-                explanation:<>
-                    <p><b>useMemo: </b> </p>
-                </>
-            },
-            {
-                explanation:<>
-                    <p><b>useRef: </b> </p>
-                </>
-            },
-            {
-                explanation:<>
-                    <p><b>useImperativeHandle: </b> </p>
-                </>
-            },
-            {
-                explanation:<>
-                    <p><b>useLayoutEffect: </b> </p>
-                </>
-            },
-            {
-                explanation:<>
-                    <p><b>useDebugValue: </b> </p>
-                </>
-            },
-            {
-                chapter:'Custom Hook'
-            },
-            {
-                explanation:<>
-                    <p><b>useCustomHook: </b>useState, useEffect... </p>
-                </>
-            },
+            },          
         ]
     },
 ]
