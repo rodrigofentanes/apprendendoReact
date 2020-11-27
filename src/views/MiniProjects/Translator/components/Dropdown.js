@@ -11,7 +11,7 @@ export const Dropdown = ({ label, options, selected, onSelectedChange }) => {
 
     useEffect(() => {
         const onBodyClick = (e) => {
-            if (ref.current.contains(e.target)){
+            if (ref.current && ref.current.contains(e.target)){
                 return;
             }
             setOpen(false);
@@ -26,7 +26,7 @@ export const Dropdown = ({ label, options, selected, onSelectedChange }) => {
 
     const renderedOptions = options.map((option) => {
         if(option.value === selected.value){
-            return null;
+            return <></>
         }
         return <>
             <div

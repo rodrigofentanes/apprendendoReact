@@ -1,7 +1,7 @@
 import { apps } from './dataViews/apps';
 import { intro } from './dataViews/intro';
 import { apis } from './dataViews/apis';
-import { advanced } from './dataViews/advanced';
+import { navigation } from './dataViews/navigation';
 import { styling } from './dataViews/styling';
 import { hooks } from './dataViews/hooks';
 import { redux } from './dataViews/redux';
@@ -18,9 +18,9 @@ export const dataRoutes = [
         rBody: [...styling]
     },
     {
-        route:'/advanced',
-        pageName:'Advanced',
-        rBody: [...advanced]
+        route:'/navigation',
+        pageName:'Navigation',
+        rBody: [...navigation]
     },
     {
         route:'/hooks',

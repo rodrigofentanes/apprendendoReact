@@ -13,7 +13,7 @@
 //  //   note:<></>,
 // ******************************
 
-export const advanced = [
+export const navigation = [
     {
         title:'HTTP requests',
         body:[
