@@ -1,15 +1,14 @@
-//dependencies
-import React from 'react';
-
-///views
-import { Home } from './Home';
+//Functional views
+import { Header } from '../components/Header/Header';
+import { Body } from '../components/Body/Body';
+import { Footer } from '../components/Footer/Footer';
 
 export const ApprendendoReact = () => {
   return <>
-      <div className="title">
-        <h1>React annotations</h1>
-        <p>Developed by Facebook. A study by Rodrigo Fentanes.</p>
-      </div>
-      <Home/>
-    </>
+    <Header></Header>
+    <br/><br/><br/>
+    <Body></Body>
+    <br/><br/><br/>
+    <Footer></Footer>
+  </>
 }

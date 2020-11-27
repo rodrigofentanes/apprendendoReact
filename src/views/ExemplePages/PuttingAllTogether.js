@@ -1,8 +1,7 @@
 import { Component } from "react";
-import {} from '../../assets/css/Styling';
 import SearchBar from './SearchBar';
 import {ImageList} from './ImageList';
-import unsplash, {} from '../../service/Unsplash';
+import unsplash from '../../service/Unsplash';
 
 
 export default class PuttingAllTogether extends Component {
@@ -83,6 +82,7 @@ export default class PuttingAllTogether extends Component {
 
     render(){
         return<>
+            <h1>Photo Searcher</h1>
             <SearchBar 
                 onSubmit={this.onSearchSubmit} 
             ></SearchBar>

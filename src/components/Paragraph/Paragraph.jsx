@@ -2,13 +2,11 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-//views
+//components
 import { BodyContent } from '../BodyContent/BodyContent';
-import { Title } from '../Title/Title';
 
 //css
 import '../BodyContent/style.css';
-
 
 // hashmap ?
 // list, key and content ?
@@ -28,7 +26,7 @@ export const Paragraph = ({items}) => {
             </>
         });
         return <React.Fragment key={index}>
-            { item.title ? <Title>{`${index+1} - ${item.title} `}</Title> : <br/> }
+            { item.title ? <BodyContent styleName="TitleStyle">{`${index+1} - ${item.title} `}</BodyContent> : <br/> }
             {renderBody}
         </React.Fragment>
     });

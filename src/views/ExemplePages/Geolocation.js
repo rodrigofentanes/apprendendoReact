@@ -69,10 +69,10 @@ export default class Geolocation extends Component{
         // )
     }
 
-    // it was part of lifecycle
-    componentDidUpdate(){
-        console.log('My component was just update - it rerendered!');
-    }
+    // // it was part of lifecycle
+    // componentDidUpdate(){
+    //     console.log('My component was just update - it rerendered!');
+    // }
 
     renderContent() {
         if(this.state.errorMessage && !this.state.lat) {
@@ -127,6 +127,7 @@ export default class Geolocation extends Component{
 
 
         return <>
+        <h1>Seasons</h1>
             {/* ! UNCOMMENT THIS TO SEE componentDidUpdate() WORKING ! */}
             {/* <p><b>Local time is: </b>{this.state.time}</p> */}
             {this.renderContent()}

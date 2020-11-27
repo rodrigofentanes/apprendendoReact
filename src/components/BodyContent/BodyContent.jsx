@@ -1,5 +1,6 @@
+//assets
 import './style.css';
-import { LocationLabel } from '../../assets/css/style';
+import { LocationLabel } from './style';
 
 export const BodyContent = (props) => {
     return <div className={props.styleName} >
