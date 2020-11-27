@@ -1,12 +1,12 @@
 //
-import {dataRoute} from '../../data/dataRoute';
+import {dataRoutes} from '../../data/dataRoutes';
 
 //css
 import './style.css';
 
 export const Header = () => {
 
-    const renderButtons = dataRoute.map((data) => {
+    const renderButtons = dataRoutes.map((data) => {
         return <>
             <a class={ window.location.pathname === data.route && "active" } href={data.route}>{data.pageName}</a>
         </>

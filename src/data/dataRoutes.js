@@ -3,8 +3,10 @@ import { intro } from './dataViews/intro';
 import { apis } from './dataViews/apis';
 import { advanced } from './dataViews/advanced';
 import { styling } from './dataViews/styling';
+import { hooks } from './dataViews/hooks';
+import { redux } from './dataViews/redux';
 
-export const dataRoute = [
+export const dataRoutes = [
     {
         route:'/',
         pageName:'Intro',
@@ -19,6 +21,16 @@ export const dataRoute = [
         route:'/advanced',
         pageName:'Advanced',
         rBody: [...advanced]
+    },
+    {
+        route:'/hooks',
+        pageName:'Hooks',
+        rBody: [...hooks]
+    },
+    {
+        route:'/redux',
+        pageName:'Redux',
+        rBody: [...redux]
     },
     {
         route:'/apps',

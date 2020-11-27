@@ -7,11 +7,11 @@ import './style.css';
 import {BodyWrapper} from './style';
 
 //data
-import { dataRoute } from '../../data/dataRoute'
+import { dataRoutes } from '../../data/dataRoutes'
 
 export const Body = () => {
 
-    const renderRoute = dataRoute.map((data) => {
+    const renderRoute = dataRoutes.map((data) => {
         return <>
             <Route path={data.route}>
                 <Paragraph
