@@ -2,6 +2,7 @@
 
 //functional views
 import { IndexGetter } from '../../views/MiniProjects/IndexGetter/IndexGetter';
+import {Songs} from '../../views/MiniProjects/Songs/Songs';
 
 // ******************************
 // ********ALLOWED ITEMS*********
@@ -82,6 +83,18 @@ export const apps = [
             },
             {
                 result:<IndexGetter></IndexGetter>
+            },
+        ]
+    },
+    {
+        title:'Songs app (with Redux)',
+        body:[
+            {
+                explanation:<>
+                </>
+            },
+            {
+                result:<Songs></Songs>
             },
         ]
     },

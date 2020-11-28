@@ -1,6 +1,6 @@
 //class-based views
 import Geolocation from '../../views/ExemplePages/Geolocation';
-import PuttingAllTogether from '../../views/ExemplePages/PuttingAllTogether';
+import  PuttingAllTogether  from '../../views/ExemplePages/PuttingAllTogether';
 
 //functional views
 import { MyWiki } from '../../views/MiniProjects/MyWiki/MyWiki';

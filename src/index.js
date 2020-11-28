@@ -4,15 +4,22 @@ import reportWebVitals from './reportWebVitals';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-//functional views
+//views
 import { ApprendendoReact } from './views/ApprendendoReact';
+
+//redux
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducers from './views/MiniProjects/Songs/reducers';
 
 //assets
 import './assets/css/index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ApprendendoReact />
+    <Provider store={createStore(reducers)}>
+      <ApprendendoReact />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root') // document.querySelector('#root') // is the same?
 );
